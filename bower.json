@@ -2,7 +2,11 @@
   "name": "front-end",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.0"
+    "jquery": "~1.11.0",
+    "foundation": "~5.2.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "jquery": ">= 2.1.0"
+  }
 }
