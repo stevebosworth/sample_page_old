@@ -7,13 +7,13 @@ var plugins = require('gulp-load-plugins')();
 
 var paths = {
     scripts: ['app/scripts'],
-    images: ['app/images'],
+    images: ['app/images/**/*'],
     stylesheets: {
         watch: 'app/styles/**/*.scss',
         src: 'app/styles/main.scss',
         dest: 'dist/styles/'
     },
-    fonts: ['app/fonts'],
+    fonts: ['app/fonts/**/*'],
     templates: ['app/*.html']
 };
 
@@ -27,13 +27,13 @@ gulp.task('scripts', function() {
 
 gulp.task('sass', function () {
     gulp.src(paths.stylesheets.src)
-            .pipe(plugins.sass())
-            .pipe(gulp.dest(paths.stylesheets.dest));
+        .pipe(plugins.sass())
+        .pipe(gulp.dest(paths.stylesheets.dest));
 });
 
 gulp.task('templates', function(){
     return gulp.src(paths.templates)
-                .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'));
 });
 
 // Copy all static images
@@ -44,6 +44,10 @@ gulp.task('images', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src(paths.fonts)
+        .pipe(gulp.dest('dist/fonts'));
+});
 
 //simple http server
 gulp.task('connect', function () {
@@ -84,5 +88,6 @@ gulp.task('watch', ['connect', 'serve'], function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['scripts', 'images', 'sass', 'watch']);
+gulp.task('default', ['scripts', 'images', 'fonts', 'sass', 'templates', 'watch']);
+gulp.task('build', ['scripts', 'images', 'fonts', 'templates', 'sass']);
 
