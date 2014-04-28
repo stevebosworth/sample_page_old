@@ -4,6 +4,7 @@ var gulp = require('gulp');
 //automatically load all plugins in your node_modules
 var plugins = require('gulp-load-plugins')();
 
+//Paths to the files used by the various build processes
 var paths = {
     scripts: ['app/scripts/**/*.js'],
     images: ['app/images/**/*'],
@@ -15,22 +16,6 @@ var paths = {
     fonts: ['app/fonts/**/*'],
     templates: ['app/*.html']
 };
-
-// gulp.task('scripts', function() {
-//     // Minify and copy all JavaScript (except vendor scripts)
-//     // return gulp.src(paths.scripts)
-//     //     .pipe(plugins.uglify())
-//     //     .pipe(plugins.concatSourcemap('all.min.js'))
-//     //     .pipe(gulp.dest('dist/scripts'));
-
-//     return plugins.browserify()
-//         // .require('backbone/node_modules/underscore', { expose: 'underscore' })
-//         // .bundle({debug: true})
-//         // .on('error', handleErrors)
-//         .pipe(gulp.src('app.js'))
-//         .pipe(gulp.dest('./dist/scripts'))
-//         .pipe(plugins.livereload());
-// });
 
 gulp.task('scripts', function() {
     // Single entry point to browserify

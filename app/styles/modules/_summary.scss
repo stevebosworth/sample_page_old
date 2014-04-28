@@ -1,0 +1,47 @@
+.survey-form-summary-container {
+    text-align: center;
+
+    p{
+        font-size: 22px;
+        color: $white;
+    }
+
+    .survey-form-summary-content {
+
+    }
+
+    .subscribe-form{
+        input{
+            display: inline-block;
+            width: 365px;
+            height: 64px;
+            background-color: $black;
+            opacity: 0.15;
+            border: none;
+        }
+
+        button{
+            display: inline-block;
+            width: 185px;
+            height: 64px;
+            background-color: $color-submit-email;
+            margin-left: -5px;
+        }
+    }
+
+    .selected-options{
+        .option{
+            background-color: $color-selected-items-summary;
+        }
+    }
+
+    .btn-return-to-survey{
+        display: inline-block;
+        width: 310px;
+        height: 60px;
+        background-color: $color-submit-email;
+        background-color: $black;
+        opacity: 0.15;
+    }
+
+}

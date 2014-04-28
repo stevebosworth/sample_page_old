@@ -1,113 +1,141 @@
 <!doctype html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>front end</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <title>front end</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- Web Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 
-    </head>
-    <body>
+</head>
+<body>
 
-        <div class="content-container">
-            <div class="survey-form-container hide">
-                <div class="view-header">
-                    <h1 class="main-heading">
-                        Industry Analyzer
-                        <span class="instructions">Select Up to 4 industries to compare</span>
-                    </h1>
-                    <p class="sub-heading">(you can change these at anytime)</p>
-                </div>
+    <div class="content-container">
+        <div class="survey-form-container ">
+            <div class="view-header-wrapper">
+                <h1 class="main-heading">
+                    Industry Analyzer
+                    <span class="instructions">Select Up to 4 industries to compare</span>
+                </h1>
+                <p class="sub-heading">(you can change these at anytime)</p>
+            </div>
 
-                <form class="form-survey" data-limit="4">
-                    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="clothing-apparel" id="clothing-apparel">
-                            <label for="clothing-apparel">
-                                <span class="checkbox-bg"></span>
-                                <span class="checkbox-icon icon-shirt tall-icon"></span>
-                                <span class="checkbox-title">Clothing &amp; Apparel</span>
-                            </label>
-                        </li>
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="jewelery-accessories" id="jewelery-accessories">
-                            <label for="jewelery-accessories">
-                                <span class="checkbox-bg"></span>
-                                <span class="checkbox-icon icon-diamond tall-icon"></span>
-                                <span class="checkbox-title">Jewelery &amp; Accessories</span>
-                            </label>
-                        </li>
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="bags-shoes" id="bags-shoes">
-                            <label for="bags-shoes">
-                                <span class="checkbox-bg"></span>
-                                <span class="checkbox-icon icon-bag tall-icon"></span>
-                                <span class="checkbox-title">Bags &amp; Shoes</span>
-                            </label>
-                        </li>
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="health-beauty" id="health-beauty">
-                            <label for="health-beauty">
-                                <span class="checkbox-bg"></span>
-                                <span class="checkbox-icon icon-bottle tall-icon"></span>
-                                <span class="checkbox-title">Health &amp; Beauty</span>
-                            </label>
-                        </li>
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="food-drink" id="food-drink">
-                            <label for="food-drink">
-                                <span class="checkbox-bg"></span>
-                                <span class="checkbox-icon icon-glass tall-icon"></span>
-                                <span class="checkbox-title">Food &amp; Drink</span>
-                            </label>
-                        </li>
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="home-garden" id="home-garden">
-                            <label for="home-garden">
-                                <span class="checkbox-bg"></span>
-                                <span class="checkbox-icon icon-couch wide-icon"></span>
-                                <span class="checkbox-title">Home &amp; Garden</span>
-                            </label>
-                        </li>
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="electronics" id="electronics">
-                            <label for="electronics">
-                                <span class="checkbox-bg"></span>
-                                <span class="checkbox-icon icon-battery wide-icon"></span>
-                                <span class="checkbox-title">Electronics</span>
-                            </label>
-                        </li>
-                        <li class="checkbox-wrapper">
-                            <input type="checkbox" name="random" id="random">
-                            <label for="random">
-                                <span class="checkbox-bg"></span>
-                                <span class="random-icon"></span>
-                                <span class="checkbox-title">Random</span>
-                            </label>
-                        </li>
-                    </ul>
-                    <button type="button" class="btn-submit">Submit Choices</button>
+            <form class="form-survey" data-limit="4">
+                <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="clothing-apparel" id="clothing-apparel">
+                        <label for="clothing-apparel">
+                            <span class="checkbox-bg"></span>
+                            <span class="checkbox-icon icon-shirt tall-icon"></span>
+                            <span class="checkbox-title">Clothing &amp; Apparel</span>
+                        </label>
+                    </li>
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="jewelery-accessories" id="jewelery-accessories">
+                        <label for="jewelery-accessories">
+                            <span class="checkbox-bg"></span>
+                            <span class="checkbox-icon icon-diamond tall-icon"></span>
+                            <span class="checkbox-title">Jewelery &amp; Accessories</span>
+                        </label>
+                    </li>
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="bags-shoes" id="bags-shoes">
+                        <label for="bags-shoes">
+                            <span class="checkbox-bg"></span>
+                            <span class="checkbox-icon icon-bag tall-icon"></span>
+                            <span class="checkbox-title">Bags &amp; Shoes</span>
+                        </label>
+                    </li>
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="health-beauty" id="health-beauty">
+                        <label for="health-beauty">
+                            <span class="checkbox-bg"></span>
+                            <span class="checkbox-icon icon-bottle tall-icon"></span>
+                            <span class="checkbox-title">Health &amp; Beauty</span>
+                        </label>
+                    </li>
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="food-drink" id="food-drink">
+                        <label for="food-drink">
+                            <span class="checkbox-bg"></span>
+                            <span class="checkbox-icon icon-glass tall-icon"></span>
+                            <span class="checkbox-title">Food &amp; Drink</span>
+                        </label>
+                    </li>
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="home-garden" id="home-garden">
+                        <label for="home-garden">
+                            <span class="checkbox-bg"></span>
+                            <span class="checkbox-icon icon-couch wide-icon"></span>
+                            <span class="checkbox-title">Home &amp; Garden</span>
+                        </label>
+                    </li>
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="electronics" id="electronics">
+                        <label for="electronics">
+                            <span class="checkbox-bg"></span>
+                            <span class="checkbox-icon icon-battery wide-icon"></span>
+                            <span class="checkbox-title">Electronics</span>
+                        </label>
+                    </li>
+                    <li class="checkbox-wrapper">
+                        <input type="checkbox" name="random" id="random">
+                        <label for="random">
+                            <span class="checkbox-bg"></span>
+                            <span class="random-icon"></span>
+                            <span class="checkbox-title">Random</span>
+                        </label>
+                    </li>
+                </ul>
+                <button type="button" class="btn-submit">Submit Choices</button>
+            </form>
+        </div>;
+
+        <div class="survey-form-summary-container hide">
+            <div class="view-header-wrapper">
+                <h1 class="main-heading">
+                    Closing Title
+                </h1>
+            </div>
+            <div class="survey-form-summary-wrapper">
+                <p class="survey-form-summary-content">
+                    Thanks for your choices. You chose
+                    <span class="selected-options">
+                        <span class="option">Health &amp; Beauty</span>
+                        and
+                        <span class="option last">Food &amp; Drink.</span>
+                    </span>
+                </p>
+            </div>
+
+            <div class="subscribe-form-wrapper">
+                <p>
+                    Want more information? Enter your email address below.
+                </p>
+                <form action="POST" class="subscribe-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="button" class="btn-subscribe-submit">
+                        <span class="mail-icon"><img src="img/icons/envelope.png" alt="envelope"></span>
+                        Submit
+                    </button>
                 </form>
-            </div>;
+            </div>
 
-            <div class="survey-form-summary-container">
-                <div class="view-header">
-                    <h1 class="main-heading">
-                        Closing Title
-                    </h1>
-                </div>
-
+            <div class="return-to-survey-wrapper">
+                <button class="btn-return-to-survey">
+                    <span class="return-icon"><img src="img/icons/return-arrow.png" alt="return"></span>
+                    Change selected options
+                </button>
             </div>
         </div>
+    </div>
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- Compiled JS -->
+    <script src="scripts/main.js"></script>
 </body>
 </html>
