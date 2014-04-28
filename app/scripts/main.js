@@ -3,7 +3,7 @@
 var $ = require('jquery');
 var _ = require('lodash');
 
-var SurveyController = require('./Survey-Controller.js');
+var SurveyController = require('./modules/survey.js');
 
 /**
 *   Global is the page level script file for the Global page.

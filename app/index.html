@@ -16,16 +16,16 @@
     <body>
 
         <div class="content-container">
-            <div class="survey-form-wrapper">
-                <header>
+            <div class="survey-form-container hide">
+                <div class="view-header">
                     <h1 class="main-heading">
                         Industry Analyzer
                         <span class="instructions">Select Up to 4 industries to compare</span>
                     </h1>
                     <p class="sub-heading">(you can change these at anytime)</p>
-                </header>
+                </div>
 
-                <form class="form-choose-industries" data-limit="4">
+                <form class="form-survey" data-limit="4">
                     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
                         <li class="checkbox-wrapper">
                             <input type="checkbox" name="clothing-apparel" id="clothing-apparel">
@@ -96,8 +96,13 @@
                 </form>
             </div>;
 
-            <div class="survey-form-summary hidden">
-                <h1>Hello World</h1>
+            <div class="survey-form-summary-container">
+                <div class="view-header">
+                    <h1 class="main-heading">
+                        Closing Title
+                    </h1>
+                </div>
+
             </div>
         </div>
 

@@ -4,7 +4,6 @@ var gulp = require('gulp');
 //automatically load all plugins in your node_modules
 var plugins = require('gulp-load-plugins')();
 
-
 var paths = {
     scripts: ['app/scripts/**/*.js'],
     images: ['app/images/**/*'],
@@ -95,7 +94,6 @@ gulp.task('watch', ['connect', 'serve'], function () {
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.images, ['images']);
     gulp.watch(paths.templates, ['templates']);
-    // gulp.watch('bower.json', ['wiredep']);
     gulp.watch([
         'app/*.html',
         'app/scripts/**/*.js',
