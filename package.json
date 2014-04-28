@@ -25,7 +25,11 @@
     "jshint-stylish": "^0.1.5",
     "opn": "^0.1.1",
     "wiredep": "^1.4.3",
-    "gulp-sass": "~0.7.1"
+    "gulp-sass": "~0.7.1",
+    "browserify": "~3.44.2",
+    "gulp-browserify": "~0.5.0",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1"
   },
   "engines": {
     "node": ">=0.10.0"

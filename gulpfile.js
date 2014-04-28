@@ -6,7 +6,7 @@ var plugins = require('gulp-load-plugins')();
 
 
 var paths = {
-    scripts: ['app/scripts'],
+    scripts: ['app/scripts/**/*.js'],
     images: ['app/images/**/*'],
     stylesheets: {
         watch: 'app/styles/**/*.scss',
@@ -17,12 +17,30 @@ var paths = {
     templates: ['app/*.html']
 };
 
+// gulp.task('scripts', function() {
+//     // Minify and copy all JavaScript (except vendor scripts)
+//     // return gulp.src(paths.scripts)
+//     //     .pipe(plugins.uglify())
+//     //     .pipe(plugins.concatSourcemap('all.min.js'))
+//     //     .pipe(gulp.dest('dist/scripts'));
+
+//     return plugins.browserify()
+//         // .require('backbone/node_modules/underscore', { expose: 'underscore' })
+//         // .bundle({debug: true})
+//         // .on('error', handleErrors)
+//         .pipe(gulp.src('app.js'))
+//         .pipe(gulp.dest('./dist/scripts'))
+//         .pipe(plugins.livereload());
+// });
+
 gulp.task('scripts', function() {
-    // Minify and copy all JavaScript (except vendor scripts)
-    return gulp.src(paths.scripts)
-        .pipe(plugins.uglify())
-        .pipe(plugins.concatSourcemap('all.min.js'))
-        .pipe(gulp.dest('dist/js'));
+    // Single entry point to browserify
+    gulp.src('app/scripts/main.js')
+        .pipe(plugins.browserify({
+            insertGlobals : true,
+            debug: true
+        }))
+        .pipe(gulp.dest('./dist/scripts'));
 });
 
 gulp.task('sass', function () {
@@ -73,18 +91,19 @@ gulp.task('serve', ['connect'], function () {
 gulp.task('watch', ['connect', 'serve'], function () {
     var server = plugins.livereload();
     // watch for changes
-    gulp.watch([
-        'app/*.html',
-        'app/scripts/**/*.js',
-        'app/images/**/*'
-    ]).on('change', function (file) {
-        server.changed(file.path);
-    });
     gulp.watch(paths.stylesheets.watch, ['sass']);
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.images, ['images']);
     gulp.watch(paths.templates, ['templates']);
     // gulp.watch('bower.json', ['wiredep']);
+    gulp.watch([
+        'app/*.html',
+        'app/scripts/**/*.js',
+        'app/images/**/*'
+    ]).on('change', function (file) {
+        console.log('live-reloadeeedd!');
+        server.changed(file.path);
+    });
 });
 
 // The default task (called when you run `gulp` from cli)
