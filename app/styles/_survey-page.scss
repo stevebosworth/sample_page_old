@@ -1,0 +1,22 @@
+.content-container {
+    margin-top: 100px;
+    margin-bottom: 130px;
+}
+
+.main-heading{
+    @extend .row;
+    text-align: center;
+    font-family: $font-family-open-sans;
+    font-weight: 700;
+    font-size: 80px;
+    color: $white;
+}
+
+body{
+    background: url('../img/bg.jpg');
+}
+
+
+
+
+

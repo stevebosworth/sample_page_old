@@ -33,7 +33,12 @@ SurveyController.prototype = _.create({
     *   @return {undefined}
     */
     initVariables: function() {
-
+        this.$form                   = $('.form-survey');
+        this.$inputs                 = this.$form.find('label');
+        this.$selectedItems          = this.$form.find('input:checked');
+        this.$surveyFormContainer    = $('.survey-form-container');
+        this.$surveySummaryContainer = $('.survey-form-summary-container');
+        this.isFormValid             = false;
     },
 
     /**
@@ -52,10 +57,34 @@ SurveyController.prototype = _.create({
     *   @return {undefined}
     */
     initEvents: function() {
+        this.$form.on('click', this.$inputs, this.onFormUpdate);
+    },
+
+
+    validateForm: function() {
 
     },
+
+    onFormUpdate: function() {
+
+        console.log(this.$selectedItems);
+        if(this.$selectedItems.length >= 4 ){
+            event.preventDefault();
+        } else {
+            this.validateForm();
+        }
+    },
+
+    sendForm: function() {
+
+    },
+
+    updateView: function() {
+
+    },
+
 });
 
 module.exports = function(){
-    new SurveyController();
+    var surveyController = new SurveyController();
 };
