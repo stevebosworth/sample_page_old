@@ -43,7 +43,6 @@ SurveyController.prototype = _.create({
     *   @return {undefined}
     */
     init: function() {
-        console.log('IT WORKS BITCH');
     },
 
     /**
@@ -58,5 +57,5 @@ SurveyController.prototype = _.create({
 });
 
 module.exports = function(){
-    return  SurveyController;
+    new SurveyController();
 };

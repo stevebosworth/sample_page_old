@@ -3,12 +3,7 @@
 var $ = require('jquery');
 var _ = require('lodash');
 
-var woot = require('./test');
 var SurveyController = require('./Survey-Controller.js');
-
-woot('wooooooo');
-
-
 
 /**
 *   Global is the page level script file for the Global page.
@@ -58,7 +53,9 @@ Global.prototype = _.create({
         // Initialize your page specific jQuery selectors here.
     },
 
-    initSurvey:  new SurveyController(),
+    initSurvey:  function(){
+        SurveyController();
+    },
 
     /**
     *   Initialize page specific events and event listeners.
