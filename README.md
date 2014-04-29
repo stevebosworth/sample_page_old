@@ -3,6 +3,14 @@ sample_page
 
 A simple form using ajax
 
+####Dependencies
+
+- [Node.js](http://nodejs.org/)
+- [NPM](https://www.npmjs.org/)
+- [Bower](http://bower.io/)
+- [Browserify](http://browserify.org/)
+- [Gulp](http://gulpjs.com/)
+
 
 ####Installation Instructions
 
