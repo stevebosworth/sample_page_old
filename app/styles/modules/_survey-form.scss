@@ -63,12 +63,6 @@
         font-size: 80px;
     }
 
-    .checkbox-wrapper{
-        height: $size-checkmark-button;
-        width: $size-checkmark-button;
-        position: relative;
-    }
-
     .checkbox-bg{
         position: absolute;
         background-color: #000;
@@ -126,5 +120,17 @@
                 margin-top: 35px;
             }
         }
+    }
+}
+
+@media #{$medium-up} {
+    .survey-form-container {
+
+    }
+}
+
+@media #{$large-up} {
+    .survey-form-container {
+
     }
 }

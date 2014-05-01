@@ -4,12 +4,12 @@
 @import "utils/_icons.scss";
 @import "_variables.scss";
 
-//Page Level CSS
-@import "_survey-page.scss";
 
 
 //Module CSS
 @import "./modules/_survey-form.scss";
 @import "./modules/_summary.scss";
 
-//Page Specific CSS
+
+//Page Level CSS
+@import "_survey-page.scss";
