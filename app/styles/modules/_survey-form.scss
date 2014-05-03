@@ -1,3 +1,7 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Mobile Breakpoint Styles
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 .survey-form-container{
     .instructions{
         margin-top: 25px;
@@ -13,28 +17,6 @@
         font-size: 18px;
     }
 
-
-    .btn-submit {
-        display: block;
-        margin: 0 auto;
-        margin-top: 45px;
-        background-color: $color-submit-form;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        width: 310px;
-        height: 65px;
-        border-radius: 2px;
-        font-family: $font-family-open-sans;
-        font-size: 22px;
-
-        &:hover{
-            background-color: lighten($color-submit-form, 5%);
-        }
-
-        &:active {
-            background-color: darken($color-submit-form, 5%);
-        }
-    }
 
     .checkbox-title{
         position: absolute;
@@ -61,6 +43,12 @@
     .wide-icon {
         padding-top: 70px;
         font-size: 80px;
+    }
+
+    .btn-submit {
+        margin-top: 45px;
+        width: 310px;
+        height: 65px;
     }
 
     .checkbox-bg{
@@ -123,11 +111,19 @@
     }
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Medium Style Overrides
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 @media #{$medium-up} {
     .survey-form-container {
 
     }
 }
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Large Style Overrides
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @media #{$large-up} {
     .survey-form-container {

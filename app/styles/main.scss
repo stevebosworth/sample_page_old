@@ -1,14 +1,21 @@
 @import "../bower_components/foundation/scss/normalize.scss";
-@import "../bower_components/foundation/scss/foundation.scss";
+// @import "../bower_components/foundation/scss/foundation.scss";
+// @import "../bower_components/foundation/scss/foundation/components.scss";
+@import "../bower_components/foundation/scss/foundation/components/_global.scss";
+@import "../bower_components/foundation/scss/foundation/components/_grid.scss";
+@import "../bower_components/foundation/scss/foundation/components/_block-grid.scss";
+@import "../bower_components/foundation/scss/foundation/components/_visibility.scss";
+
+@import "_variables.scss";
 @import "_settings.scss";
 @import "utils/_icons.scss";
-@import "_variables.scss";
 
-
+//Global Modules
+@import "utils/_buttons.scss";
 
 //Module CSS
-@import "./modules/_survey-form.scss";
-@import "./modules/_summary.scss";
+@import "modules/_survey-form.scss";
+@import "modules/_summary.scss";
 
 
 //Page Level CSS

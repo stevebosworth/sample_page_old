@@ -1,0 +1,29 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Global Button Overrides
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+button, .button {
+    border: 0px;
+    font-family: $font-family-open-sans;
+    color: $white;
+}
+
+.btn-submit {
+    display: block;
+    margin: 0 auto;
+    background-color: $color-submit-form;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    font-family: $font-family-open-sans;
+    font-size: 22px;
+    padding: 0px;
+
+    &:hover{
+        background-color: darken($color-submit-form, 15%);
+    }
+
+    &:active {
+        background-color: darken($color-submit-form, 25%);
+    }
+}
